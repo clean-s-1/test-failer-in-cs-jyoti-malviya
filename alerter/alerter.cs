@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace AlerterSpace {
     class Alerter {
@@ -8,7 +9,7 @@ namespace AlerterSpace {
             // Return 200 for ok
             // Return 500 for not-ok
             // stub always succeeds and returns 200
-            if (celcius > 24)
+            if (celcius > 2)
             {
                 return 500;
             }
@@ -20,6 +21,7 @@ namespace AlerterSpace {
         static void alertInCelcius(float farenheit) {
             float celcius = (farenheit - 32) * 5 / 9;
             int returnCode = networkAlertStub(celcius);
+            Debug.Assert(returnCode == 200);
             if (returnCode != 200) {
                 // non-ok response is not an error! Issues happen in life!
                 // let us keep a count of failures to report
