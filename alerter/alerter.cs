@@ -8,7 +8,14 @@ namespace AlerterSpace {
             // Return 200 for ok
             // Return 500 for not-ok
             // stub always succeeds and returns 200
-            return 200;
+            if (celcius > 24)
+            {
+                return 500;
+            }
+            else 
+            {
+                return 200;
+            }
         }
         static void alertInCelcius(float farenheit) {
             float celcius = (farenheit - 32) * 5 / 9;
@@ -18,7 +25,7 @@ namespace AlerterSpace {
                 // let us keep a count of failures to report
                 // However, this code doesn't count failures!
                 // Add a test below to catch this bug. Alter the stub above, if needed.
-                alertFailureCount += 0;
+                alertFailureCount += 1;
             }
         }
         static void Main(string[] args) {
