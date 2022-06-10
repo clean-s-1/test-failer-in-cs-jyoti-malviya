@@ -9,7 +9,7 @@ namespace AlerterSpace {
             // Return 200 for ok
             // Return 500 for not-ok
             // stub always succeeds and returns 200
-            if (celcius > 2)
+            if (celcius > 24)
             {
                 return 500;
             }
